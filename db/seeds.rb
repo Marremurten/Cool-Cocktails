@@ -14,3 +14,6 @@ puts "create Igridentrs.."
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+
+puts "creating doses"
+

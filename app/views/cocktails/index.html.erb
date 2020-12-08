@@ -1,3 +1,5 @@
+
+
 <div class="banner">
   <div class="banner-wrapper text-center">
     <%= image_tag('logo-cc2.png', crop: :fill) %>
@@ -5,5 +7,42 @@
   </div>
 </div>
 
+<div class="text-center mb-4">
 
+    <div class="btn btn-flat" id="myBtn" >Add a Cocktail</div>
+</div>
+
+
+
+  <div class="container d-flex flex-wrap justify-content-center">
+
+    <% @cocktails.each do |c| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= c.name %>
+    </div>
+    <% end %>
+
+  </div>
+
+
+
+
+
+
+<div id="myPopup" class="popup">
+
+
+  <!-- Modal content -->
+  <div class="popup-content">
+    <div class="popup-border">
+      <span class="close">&times;</span>
+        <%= simple_form_for(@cocktail) do |f| %>
+         <%= f.input :name, label: "Name your cocktail!" %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+
+
+</div>
 
