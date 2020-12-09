@@ -17,9 +17,11 @@
   <div class="container d-flex flex-wrap justify-content-center">
 
     <% @cocktails.each do |c| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <%= c.name %>
-    </div>
+      <%= link_to cocktail_path(c) do  %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path c.photo.key%>)">
+          <%= c.name %>
+        </div>
+      <% end %>
     <% end %>
 
   </div>
@@ -38,6 +40,7 @@
       <span class="close">&times;</span>
         <%= simple_form_for(@cocktail) do |f| %>
          <%= f.input :name, label: "Name your cocktail!" %>
+         <%= f.input :photo, as: :file %>
         <%= f.submit %>
       <% end %>
     </div>
