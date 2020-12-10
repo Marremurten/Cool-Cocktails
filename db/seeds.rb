@@ -57,23 +57,23 @@ sidecar.photo.attach(io: file, filename: 'sidecar.jpg', content_type: 'image/jpg
 sidecar.save!
 
 file = File.open("app/assets/images/vesper.jpg")
-vesper = Cocktail.new(name: 'Sidecar')
+vesper = Cocktail.new(name: 'Vesper')
 vesper.photo.attach(io: file, filename: 'vesper.jpg', content_type: 'image/jpg')
 vesper.save!
 
 file = File.open("app/assets/images/gin-fizz.jpg")
-ginfizz = Cocktail.new(name: 'Sidecar')
+ginfizz = Cocktail.new(name: 'Gin Fizz')
 ginfizz.photo.attach(io: file, filename: 'gin-fizz.jpg', content_type: 'image/jpg')
 ginfizz.save!
 
 file = File.open("app/assets/images/aperolspritz.jpg")
-aperolspritz = Cocktail.new(name: 'Sidecar')
+aperolspritz = Cocktail.new(name: 'Aperol Spritz')
 aperolspritz.photo.attach(io: file, filename: 'aperolspritz.jpg', content_type: 'image/jpg')
 aperolspritz.save!
 
 
 file = File.open("app/assets/images/americano.jpg")
-americano = Cocktail.new(name: 'Sidecar')
+americano = Cocktail.new(name: 'Americano')
 americano.photo.attach(io: file, filename: 'americano.jpg', content_type: 'image/jpg')
 americano.save!
 
