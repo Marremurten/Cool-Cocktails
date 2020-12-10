@@ -7,27 +7,37 @@
   </div>
 </div>
 
-<div class="text-center mb-4">
+<div class=" container d-flex justify-content-between mb-4 p-5">
 
-    <div class="btn btn-flat" id="myBtn" >Add a Cocktail</div>
+    <div class="btn btn-flat-2" id="myBtn" >Add a Cocktail</div>
+    <div style="display: flex">
+      <div>
+      <%= form_tag cocktails_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-cocktails",
+        placeholder: "Find a cocktail"
+        %>
+        </div>
+         <%= submit_tag "Search", class: "btn btn-flat-search " %>
+      <% end %>
+    </div>
 </div>
 
+<div class="container text-center">
 
-
-  <div class="container d-flex flex-wrap justify-content-center">
+  <div class="row d-flex justify-content-center ">
 
     <% @cocktails.each do |c| %>
       <%= link_to cocktail_path(c) do  %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path c.photo.key%>)">
+        <div class="card-category col-12 m-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path c.photo.key%>)">
           <%= c.name %>
         </div>
       <% end %>
     <% end %>
 
   </div>
-
-
-
+  </div>
 
 
 

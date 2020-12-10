@@ -15,8 +15,8 @@
 
 
 .btn-flat-2 {
+  margin-left: 25px;
   color: black;
-  margin-left: 16px;
   background: #7ED957;
   width: 200px;
   padding: 8px 24px;
@@ -29,3 +29,14 @@
   background: #1BCB7F;
   color: white;
 }
+
+.btn-flat-search {
+  color: black;
+  background: #7ED957;
+  width: 200px;
+  padding: 8px 24px;
+  border-radius: 0px 8px 8px 0px;
+  transition: background 0.3s ease;
+  border: 6px solid #FEA5DB;
+  margin-right: 25px;
+  }
