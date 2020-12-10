@@ -1,0 +1,58 @@
+.show-wrapper {
+  width: 80%;
+  margin: 40px auto;
+  border: 5px solid #fea5db;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(254, 165, 219, 0.4);
+  border-radius: 5%;
+}
+
+.border-pink {
+  margin: 1px;
+  border: 5px solid #fea5db;
+  box-shadow: 5px 5px 5px rgba(254, 165, 219, 0.4);
+  border-radius: 5%;
+
+}
+
+.border-blue {
+  margin: 1px;
+  border: 5px solid #78c3f0;
+  box-shadow: 5px 5px 5px rgba(120, 195, 240, 0.4);
+  border-radius: 5%;
+
+}
+
+.show-content {
+  color: rgb(1, 4, 15);
+  font-family: 'Nerko One';
+  background-color: #78c3f0;
+
+  padding: 20px 40px;
+
+}
+
+.show-content h2 {
+  font-size: 48px;
+}
+
+.show-content p {
+
+  font-size: 24px;
+}
+
+.show-content-review {
+  color: white;
+  font-family: 'Nerko One';
+  padding: 20px 40px;
+
+}
+
+.show-content-review h2 {
+  font-size: 48px;
+}
+
+.show-content-review form {
+
+  font-size: 24px;
+}

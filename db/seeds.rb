@@ -13,9 +13,12 @@ Cocktail.destroy_all
 
 puts "create Igridentrs.."
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+ lemon = Ingredient.create(name: "lemon")
+ ice = Ingredient.create(name: "ice")
+ mint = Ingredient.create(name: "mint leaves")
+ gin = Ingredient.create(name: "Gin")
+ tonic = Ingredient.create(name: "Tonic")
+
 
 puts "creating doses"
 
@@ -34,3 +37,6 @@ file = URI.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/de
 sex = Cocktail.create(name: 'Sex on the Beach')
 sex.photo.attach(io: file, filename: 'sex.jpg', content_type: 'image/jpg')
 
+puts "creating doses"
+dose1 = Dose.create(description: "2 parts", cocktail_id: gittonic.id, ingredient_id: gin.id)
+dose2 = Dose.create(description: "1 part", cocktail_id: gittonic.id, ingredient_id: tonic.id)

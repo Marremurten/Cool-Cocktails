@@ -1,5 +1,90 @@
 <div class="banner-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @cocktail.photo.key %>)">
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <h1 style="color: #fea5db; font-size: 78px;">
+      <%=@cocktail.name %>
+    </h1>
 
+  </div>
 </div>
 
-hej
+
+  <div class="show-wrapper">
+    <div class="border-blue">
+      <div class="border-pink">
+        <div class="border-blue">
+          <div class="border-pink">
+            <div class="border-blue row" style="background: black">
+              <div class="border-pink show-content col-7  ">
+                <h2>Ingredients</h2>
+                <% @cocktail.doses.each do |dose|  %>
+                  <div>
+                    <p>
+                      <%= dose.ingredient.name%>, <%= dose.description %>
+                      <%= link_to dose_path(dose),
+                       method: :delete,
+                       remote: true do  %>
+                       <i class="fas fa-trash-alt"></i>
+                       <% end %>
+                    </p>
+                    </div>
+                <% end %>
+                <div class="btn btn-flat-2 ml-0" id="myBtn" >Add an ingredient</div>
+                <div class="border mt-4 mb-2"></div>
+
+                  <h2>Reviews</h2>
+                  <% if @cocktail.reviews.exists? %>
+                    <% @cocktail.reviews.each do |r| %>
+                     <div class="d-flex ">
+                       <p><em> - <%= r.content %> </em> </p>
+                       <p class="ml-4">
+                        <% r.rating.to_i.times do %>
+                        <i class="fas fa-star"></i>
+                        <% end %>
+                       </p>
+                     </div>
+                    <% end %>
+
+                  <% else %>
+                    <p><em>No reviews yet, leave a review up to the right if you like it <3 </em></p>
+                  <% end %>
+
+
+
+              </div>
+              <div class="col show-content-review">
+                <h2>Leave a review!</h2>
+                  <%= simple_form_for([ @cocktail, @review ], remote: true) do |form| %>
+                    <%= form.label :rating %>
+                    <%= form.select :rating, [1,2,3,4,5] %>
+                    <%= form.input :content, label: 'Comment', as: :text %>
+                    <%= form.button :submit, label:'Add ingredient', class: "btn btn-flat-2 ml-0" %>
+                 <% end %>
+             </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="myPopup" class="popup">
+
+
+  <!-- Modal content -->
+  <div class="popup-content">
+    <div class="popup-border">
+      <span class="close">&times;</span>
+         <%= simple_form_for([ @cocktail, @dose ]) do |form| %>
+          <%= form.association :ingredient %>
+          <%= form.input :description %>
+          <%= form.button :submit, label:'Add ingredient', class: "btn btn-flat" %>
+
+      <% end %>
+    </div>
+  </div>
+
+
+</div>
