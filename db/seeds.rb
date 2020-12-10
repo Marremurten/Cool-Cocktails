@@ -33,47 +33,47 @@ puts "creating doses"
 puts "Cocktails"
 
 file = URI.open('https://aomeassetsprod.blob.core.windows.net/editorial/2016/01/gin-och-tonic.jpg')
-gittonic = Cocktail.create(name: 'Gin Tonic')
+gittonic = Cocktail.new(name: 'Gin Tonic')
 gittonic.photo.attach(io: file, filename: 'gin-och-tonic.jpg', content_type: 'image/jpg')
 gittonic.save!
 
 file = URI.open('https://www.thespruceeats.com/thmb/HI6-4Loox4ar9S4vfe5VCwzvwBQ=/2848x2136/smart/filters:no_upscale()/fresh-margarita-cocktail-recipe-759317-step-05-dae71772c4304cf7911489a1c7d219ab.jpg')
-margarita = Cocktail.create(name: 'Margarita')
+margarita = Cocktail.new(name: 'Margarita')
 margarita.photo.attach(io: file, filename: 'margarita.jpg', content_type: 'image/jpg')
 margarita.save!
 
 file = URI.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-191217-sex-on-the-beach-109-landscape-pf-1-1577742797.jpg')
-sex = Cocktail.create(name: 'Sex on the Beach')
+sex = Cocktail.new(name: 'Sex on the Beach')
 sex.photo.attach(io: file, filename: 'sex.jpg', content_type: 'image/jpg')
 sex.save!
 
 file = File.open("app/assets/images/blood-and-sand.jpg")
-bloddandsand = Cocktail.create(name: 'Blod and Sand')
+bloddandsand = Cocktail.new(name: 'Blod and Sand')
 bloddandsand.photo.attach(io: file, filename: 'blood-and-sand.jpg', content_type: 'image/jpg')
 
 file = File.open("app/assets/images/sidecar.jpg")
-sidecar = Cocktail.create(name: 'Sidecar')
+sidecar = Cocktail.new(name: 'Sidecar')
 sidecar.photo.attach(io: file, filename: 'sidecar.jpg', content_type: 'image/jpg')
 sidecar.save!
 
 file = File.open("app/assets/images/vesper.jpg")
-vesper = Cocktail.create(name: 'Sidecar')
+vesper = Cocktail.new(name: 'Sidecar')
 vesper.photo.attach(io: file, filename: 'vesper.jpg', content_type: 'image/jpg')
 vesper.save!
 
 file = File.open("app/assets/images/gin-fizz.jpg")
-ginfizz = Cocktail.create(name: 'Sidecar')
+ginfizz = Cocktail.new(name: 'Sidecar')
 ginfizz.photo.attach(io: file, filename: 'gin-fizz.jpg', content_type: 'image/jpg')
 ginfizz.save!
 
 file = File.open("app/assets/images/aperolspritz.jpg")
-aperolspritz = Cocktail.create(name: 'Sidecar')
+aperolspritz = Cocktail.new(name: 'Sidecar')
 aperolspritz.photo.attach(io: file, filename: 'aperolspritz.jpg', content_type: 'image/jpg')
 aperolspritz.save!
 
 
 file = File.open("app/assets/images/americano.jpg")
-americano = Cocktail.create(name: 'Sidecar')
+americano = Cocktail.new(name: 'Sidecar')
 americano.photo.attach(io: file, filename: 'americano.jpg', content_type: 'image/jpg')
 americano.save!
 
