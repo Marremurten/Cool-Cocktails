@@ -1,6 +1,6 @@
 
 
-<div class="banner">
+<div class="banner" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=image_path "banner.jpg"%>); background-position: bottom; background-size: cover;">
   <div class="banner-wrapper text-center">
     <%= image_tag('logo-cc2.png', crop: :fill) %>
 
@@ -30,7 +30,7 @@
 
     <% @cocktails.each do |c| %>
       <%= link_to cocktail_path(c) do  %>
-        <div class="card-category col-12 m-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path c.photo.key%>)">
+        <div class="card-category col-12 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path c.photo.key%>)">
           <%= c.name %>
         </div>
       <% end %>
