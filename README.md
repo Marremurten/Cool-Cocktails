@@ -4,4 +4,4 @@ Le Wagon first rails project.
 
 
 
-![alt text](https://github.com/Marremurten/Cool-Cocktails/blob/master/printscr.png?raw=true)
+![alt text](https://github.com/Marremurten/Cool-Cocktails/blob/master/app/assets/images/printscr.png?raw=true)
