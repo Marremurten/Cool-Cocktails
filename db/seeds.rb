@@ -48,7 +48,7 @@ sex.photo.attach(io: file, filename: 'sex.jpg', content_type: 'image/jpg')
 sex.save!
 
 file = File.open("app/assets/images/blood-and-sand.jpg")
-bloddandsand = Cocktail.new(name: 'Blod and Sand')
+bloddandsand = Cocktail.new(name:'Blod and Sand')
 bloddandsand.photo.attach(io: file, filename: 'blood-and-sand.jpg', content_type: 'image/jpg')
 
 file = File.open("app/assets/images/sidecar.jpg")
