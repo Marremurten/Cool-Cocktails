@@ -1,1 +1,6 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+## Cool Cocktails with Martin
+
+Le Wagon first rails project.
+
+
+![alt text](https://github.com/Marremurten/Cool-Cocktails/tree/master/app/assets/image/printscr.png
